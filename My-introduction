@@ -33,6 +33,37 @@
     Favourite:Quotation:<q>With-Great-Power-Comes-Great-Responsibilty.</q>
   </h6>
 
+<h7>Two of my Favourite images</h7>
+<br>
+<br>
+<center>
+<img src="https://i.pinimg.com/originals/51/11/2d/51112da378a06b54281a48917ffd1db2.jpg">
+<img src="https://cdna.artstation.com/p/assets/images/images/046/357/522/large/leonardo-flores-xlr8.jpg?1644933012">
+</center>
+
+<h8>One of my Favourite Audio</h8>
+
+<audio controls>
+<source src="gun-fire-346766.mp3" type="audio/mp3">
+  
+</audio>
+
+<h9>One of my Favourite Video Samples</h9>
+
+<video width="400" controls>
+<source src="downloadSpark_273907.exe" type="video/mp4">
+
+</video>
+
+<h10>Two of my Favourite Videos</h10>
+
+<iframe width="1047" height="438" src="https://www.youtube.com/embed/V6dIZ6b6j50" title="spider-man || spectacular" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="913" height="514" src="https://www.youtube.com/embed/EIk-yaDc7wY" title="Ben 10 Classic intro, but in Alien Force style" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+
+
   
 
     </body>
