@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Today-Calendar-using-JS:</title>
+         <form id="myForm">
+        <input id="myInput" type="text">
+        <button> Add </button>
+    </form>
+
+<style>
+body{ 
+background-color: rgb(0, 183, 255);
+text-align: center;
+text-decoration-line: underline;
+}
+h1{
+    background-color: rgb(85, 255, 0);
+    font-style: oblique;
+}
+div{
+    background-color: rgb(0, 255, 242);
+    font-size: xx-large;
+text-decoration-color: aquamarine;
+}
+</style>
+    </head>
+
+    <body>
+        <h1>Today-Calendar:</h1> 
+         <div id="MyCalendarDisplay" onload="showCalendar()"></div>
+
+<script>
+    function showCalendar() {
+            var date = new Date();
+            var y = date.getYears();
+            var m = date.getMonths();
+            var d = date.getDay();
+
+            if (d < 10) {
+                d = d - 1;
+            }
+
+            m = (m < 10) ? "0" + m : m;
+            d = (d < 10) ? "0" + d : d;
+
+    var calendar = "Date: " + date +"/"+ month +"/"+ year + "Day: " + today;
+    document.getElementById("Mycalendar").innerText = calendar;
+    setCalendarout(showCalendar, 1000000);
+        }
+        showCalendar();
+</script>
+    </body>
+</html>
