@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Counter-App:</h1>
+        <p><span id="seconds">00</span>:<span id="milliseconds">00</span></p>
+        <button id="button-increment">Start</button>
+        <button id="button-decrement">Stop</button>
+        <button id="button-reset">Reset</button>
+    </div>
+
+    <script>
+        window.onload = function () {
+            var value = 0;
+            var button_increment = document.getElementById('button-increment');
+            var button_decrement = document.getElementById('button-decrement');
+            var button_reset = document.getElementById('button-reset');
+
+            buttonIncrease.onclick = function () {
+                clearInterval(Interval);
+                Interval = setInterval(startincreament, 1);
+            }
+
+            buttonDecrease.onclick = function () {
+                clearInterval(Interval);
+            }
+            buttonReset.onclick = function () {
+                clearInterval(Interval);
+                Decrement = 0;
+                Increment = 0;
+                appendDecrement.innerHTML = "00";
+                appendIncrement.innerHTML = "00";
+            }
+            function startIncreament() {
+                Increament++;
+
+                if (Increment <= 9) {
+                    appendIncrement.innerHTML = "0" + Increment;
+                }
+                if (Increment > 9) {
+                    appendIncrement.innerHTML = Increment;
+                }
+                if (Increment > 99) {
+                    Increment++;
+                    appendIncrement.innerHTML = "0" + Increment;
+                    Increment = 0;
+                    appendIncrement.innerHTML = "00"
+                }
+                if (increment > 9) {
+                    appendIncrement.innerHTML = increment;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
