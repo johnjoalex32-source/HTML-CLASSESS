@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            text-align: center;
+            font-family: Helvetica, sans-serif;
+            background-color: aqua;
+        }
+
+        #number {
+            font-size: 320px;
+        }
+
+        #number:hover {
+            cursor: pointer;
+            color: rgb(242, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Stop-Changing-Numbers-App:</h1>
+    <div>Click on the numbers...</div>
+    <div id="number" onclick="stopStart()"></div>
+    <script>
+        // number image from value 1 to 6 are given in an array, codes are from Number face Emojipedia
+        var numbers = ['&#9856', '&#9857', '&#9858', '&#9859', '&#9860', '&#9861;'];
+        var stopped = true;
+
+        // for keep on changing the number emojis
+        function change() {
+            var random = Math.floor(Math.random() * 6);
+            number.innerHTML = numbers[random];
+        }
+
+        function stopStart() {
+            if (stopped) {
+                stopped = false;
+                // change function is called here to change the image for every 0.1 seconds
+                t = setInterval(change, 100);
+            } else {
+                clearInterval(t);
+                stopped = true;
+            }
+        }
+
+        // invoking function
+        window.onload = function () {
+            number = document.getElementById("number");
+            stopStart();
+        }
+    </script>
+</body>
+
+</html>
