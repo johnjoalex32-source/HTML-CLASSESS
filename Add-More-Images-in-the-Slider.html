@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+    .mySlides {
+    display: none;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+</style>
+    </head>
+
+    <body>
+        <!--Slide Show-->
+        <section>
+    <img class="mySlides" src="Some_image.width-1200.e8ab41f.jpg" style="height:500px;">
+    <img class="mySlides" src="Frilled-lizard-jake-barker.jpg" style="height:500px;">
+    <img class="mySlides" src="91oMD9dLtvL._AC_UF894,1000_QL80_.jpg" style="height:500px;">
+</section>
+        <script>
+// Automatic Slideshow - change image every 3 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+        </script>
+    </body>
+</html>
