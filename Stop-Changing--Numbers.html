@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Stop-Changing Numbers App</title>
+
+<style>
+
+body {
+
+text-align: center;
+
+font-family: Arial, sans-serif;
+
+}
+
+#number {
+
+font-size: 250px;
+
+cursor: pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Stop-Changing-Numbers App</h1>
+
+<div>Click on the numbers...</div>
+
+<div id="number" onclick="stopStart()"></div>
+
+<p id="diceResult">Click the number to Stop/Start!</p>
+
+<script>
+
+// Dice Unicode symbols
+
+var numbers = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
+
+var number;
+
+var t;
+
+var clickCount = 0;
+
+// Change the displayed symbol randomly
+
+function change() {
+
+var random = Math.floor(Math.random() * 6);
+
+number.innerHTML = numbers[random];
+
+}
+
+// Stop on odd clicks, start on even clicks
+
+function stopStart() {
+
+clickCount++;
+
+if (clickCount % 2 === 1) {
+
+clearInterval(t); // Stop changing
+
+} else {
+
+t = setInterval(change, 100); // Start changing
+
+}
+
+}
+
+// Start automatically when the page loads
+
+window.onload = function () {
+
+number = document.getElementById("number");
+
+t = setInterval(change, 100);
+
+};
+
+</script>
+
+</body>
+
+</html>
