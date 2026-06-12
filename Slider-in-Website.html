@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style>
+.mySlides {
+    display: none;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+</style>
+    </head>
+
+    <body>
+<!-- Slide Show -->
+<section>
+    <img class="mySlides" src="Amur-Tiger-©Nina-Day-600x380 (1).jpg" style="height:500px;">
+    <img class="mySlides" src="1778904004_f0f0d567e9_oCropped-f09263a287624aa2b237b654b3dc67cb.jpg" style="height:500px;">
+    <img class="mySlides" src="images.jpeg" style="height:500px;">
+    <img class="mySlides" src="images (1).jpeg" style="height:500px;">
+    <img class="mySlides" src="images (2).jpeg" style="height:500px;">
+</section>
+<script>
+    // Automatic Slideshow - change image every 3 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 3000);
+    }
+</script>
+    </body>
+</html>
